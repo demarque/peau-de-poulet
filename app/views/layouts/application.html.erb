@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Peaudepoulet</title>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body data-coffee-cup="<%= CoffeeCup.body_data(request) %>">
+  <div id="main-wrapper">
+    <header>
+      <div class="logo"><%= image_tag('logo.png') %></div>
+    </header>
+    <%= yield %>
+  </div>
+</body>
+</html>

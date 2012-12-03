@@ -1,0 +1,43 @@
+<%= form_for @game do |f| %>
+
+  <div id="game-wrapper">
+    <div id="amelie"></div>
+    <div id="score-pane" class="pane">
+      <h2>Poulets</h2>
+      <div id="score">0</div>
+    </div>
+
+    <div id="middle-pane" class="pane">
+      <div id="life-pane">
+        <div id="life3" class="life"><div class="killed"></div></div>
+        <div id="life2" class="life"><div class="killed"></div></div>
+        <div id="life1" class="life"><div class="killed"></div></div>
+      </div>
+      <div id="submit-pane">
+        <h2>Partie terminee!</h2>
+        <label>Entrez votre nom :</label>
+        <%= f.text_field(:name, id: 'field-name') %>
+        <%= f.hidden_field(:score, id: 'field-score') %>
+
+        <%= submit_tag 'Soumettre', id: 'submit-score' %>
+      </div>
+    </div>
+
+    <div id="leader-pane" class="pane">
+      <h2>Highscores</h2>
+      <ul>
+        <% @leaders.each do |leader| %>
+          <li><div class="name"><%= leader.name %></div><div class="score"><%= leader.score %></div></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div id="trashes">
+      <% (1..5).each do |id| %>
+        <%= render 'trash', id: id %>
+      <% end %>
+    </div>
+  </div>
+
+
+<% end %>

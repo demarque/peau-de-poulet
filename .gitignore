@@ -1,0 +1,12 @@
+# config files
+config/mongoid.yml
+
+# log files
+log/*.log
+log/*.pid
+
+public/assets/*
+
+# temporary files
+tmp/**/*
+tmp/*
