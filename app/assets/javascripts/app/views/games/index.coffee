@@ -11,6 +11,8 @@
 
     @launcher = window.setInterval((=> @popRandomTargets()), 500)
 
+    if $('body').width() < 1100 then $('body').addClass 'mobile'
+
     $('#trashes div.chicken').click (e) => @hideChicken($(e.target), true)
     $('#trashes div.piggy').click (e) => @hidePiggy($(e.target), true)
 

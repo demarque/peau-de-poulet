@@ -1,76 +1,78 @@
 @font-face{font-family:'AgentOrange';src:url("/fonts/agentorange.eot");src:url("/fonts/agentorange.eot?iefix") format("embedded-opentype"), url("/fonts/agentorange.woff") format("woff"), url("/fonts/agentorange.ttf") format("truetype"), url("/fonts/agentorange.svg#webfontuDfec0Uj") format("svg");font-weight:normal;font-style:normal}
 
-body{background:image-url("bg.jpg") center bottom;background-attachment:fixed;border:none;margin:0px;padding:0px;}
+html{height:100%;width:100%;}
+body{height:100%;width:100%;}
 
-div#main-wrapper{margin:-905px 0px 0px -600px;height:750px;left:50%;position:absolute;top:100%;width:1200px;
-  header{height:320px;
-    div.logo{float:left;}
-  }
-}
-
-div#game-wrapper{clear:both;float:left;height:450px;margin:0px 0px 0px 0px;width:100%;
-  div#amelie{background:image-url("amelie.png") no-repeat bottom center;float:left;height:165px;margin:-231px 0px 0px 650px;position:absolute;width:300px;}
-
-  div.pane{float:left;height:250px;margin-bottom:-60px;
-    h2{color:#000;font-family:'AgentOrange';font-size:20px;margin:50px 0px 25px 0px;text-align:center;}
-  }
-
-  div#score-pane{margin-left:92px;margin-right:155px;width:225px;
-    div#score{font-family:'AgentOrange';font-size:48px;padding:5px;text-align:center;width:100%;}
-  }
-
-  div#middle-pane{height:250px;margin-right:83px;width:400px;
-    div#life-pane{display:block;margin-top:80px;
-      div.life{background:image-url("piggy.png") no-repeat top center;float:left;height:100px;margin:0px 40px 0px 0px;width:85px;
-        div.killed{background:image-url("killed.png") no-repeat top center;display:none;height:56px;margin:20px 0px 0px 16px;width:48px;}
-      }
-    }
-
-    div#submit-pane{display:none;margin-top:60px;
-      h2{float:left;margin:0px 0px 12px 0px;padding:3px 0px;}
-      label{display:block;float:left;font-family:'AgentOrange';font-size:14px;margin:0px 0px 10px 0px;}
-      input#field-name{border:4px solid #eae6cc;border-radius:5px;color:#5f3f25;font-size:18px;margin:0px 0px 15px 0px;outline:0;padding:8px 15px;width:300px;}
-      input#submit-score{border:1px solid #855229;border-radius:5px;box-shadow:2px 3px 1px 0px rgba(70,46,27,1);color:#fff;cursor:pointer;float:right;font-family:'Lucida Grande', Helvetica, Arial, sans-serif;font-size:13px;height:auto;line-height:normal;margin:0px 65px 0px 0px;margin-bottom:1px;margin-top:0px;overflow:hidden;padding:7px 15px;text-shadow:none;width:auto;
-        background: #794b25;
-        background: linear-gradient(top, #A86933, #794b25);
-        background: -moz-linear-gradient(top, #A86933, #794b25);
-        background: -webkit-linear-gradient(top, #A86933, #794b25);
-      }
-      input:hover#submit-score{background:#a06331;}
-      input:active#submit-score{box-shadow:1px 1px 1px 0px rgba(70,46,27,1);margin-top:1px;}
-    }
-
-  }
-
-  div#leader-pane{width:227px;
-    ul{list-style:none;margin:0px;padding:0px;
-      li{float:left;font-family:'AgentOrange';font-size:14px;margin:0px 0px 14px 25px;
-        div.name{float:left;width:130px;}
-        div.score{float:left;text-align:right;width:50px;}
-      }
+body{background:image-url("bg.jpg") center bottom;background-attachment:fixed;border:none;margin:0px;padding:0px;
+  div#main-wrapper{margin:-905px 0px 0px -600px;height:750px;left:50%;position:absolute;top:100%;width:1200px;
+    header{height:320px;
+      div.logo{float:left;}
     }
   }
 
+  div#game-wrapper{clear:both;float:left;height:450px;margin:0px 0px 0px 0px;width:100%;
+    div#amelie{background:image-url("amelie.png") no-repeat bottom center;float:left;height:165px;margin:-231px 0px 0px 650px;position:absolute;width:300px;}
 
-  div#trashes{clear:both;height:250px;margin:0px auto 0px auto;width:850px;
-    div.trash{background:image-url("trash-back.png") no-repeat bottom center;float:left;height:200px;width:130px;
-      div.front{background:image-url("trash-front.png") no-repeat bottom center;height:140px;margin-top:60px;position:absolute;width:130px;}
-      div.content{
-        div.target{background:no-repeat top center;cursor:pointer;height:100px;margin:100px 0px 0px 20px;overflow:hidden;position:absolute;text-indent:-9999px;width:85px;
-          -moz-user-select:none;
-          -khtml-user-select:none;
-          -webkit-user-select:none;
-          user-select:none;
+    div.pane{float:left;height:250px;margin-bottom:-60px;
+      h2{color:#000;font-family:'AgentOrange';font-size:20px;margin:50px 0px 25px 0px;text-align:center;}
+    }
+
+    div#score-pane{margin-left:92px;margin-right:155px;width:225px;
+      div#score{font-family:'AgentOrange';font-size:48px;padding:5px;text-align:center;width:100%;}
+    }
+
+    div#middle-pane{height:250px;margin-right:83px;width:400px;
+      div#life-pane{display:block;margin-top:80px;
+        div.life{background:image-url("piggy.png") no-repeat top center;float:left;height:100px;margin:0px 40px 0px 0px;width:85px;
+          div.killed{background:image-url("killed.png") no-repeat top center;display:none;height:56px;margin:20px 0px 0px 16px;width:48px;}
         }
-        div.chicken{background-image:image-url("chicken.png");}
-        div.piggy{background-image:image-url("piggy.png");}
+      }
+
+      div#submit-pane{display:none;margin-top:60px;
+        h2{float:left;margin:0px 0px 12px 0px;padding:3px 0px;}
+        label{display:block;float:left;font-family:'AgentOrange';font-size:14px;margin:0px 0px 10px 0px;}
+        input#field-name{border:4px solid #eae6cc;border-radius:5px;color:#5f3f25;font-size:18px;margin:0px 0px 15px 0px;outline:0;padding:8px 15px;width:300px;}
+        input#submit-score{border:1px solid #855229;border-radius:5px;box-shadow:2px 3px 1px 0px rgba(70,46,27,1);color:#fff;cursor:pointer;float:right;font-family:'Lucida Grande', Helvetica, Arial, sans-serif;font-size:13px;height:auto;line-height:normal;margin:0px 65px 0px 0px;margin-bottom:1px;margin-top:0px;overflow:hidden;padding:7px 15px;text-shadow:none;width:auto;
+          background: #794b25;
+          background: linear-gradient(top, #A86933, #794b25);
+          background: -moz-linear-gradient(top, #A86933, #794b25);
+          background: -webkit-linear-gradient(top, #A86933, #794b25);
+        }
+        input:hover#submit-score{background:#a06331;}
+        input:active#submit-score{box-shadow:1px 1px 1px 0px rgba(70,46,27,1);margin-top:1px;}
+      }
+
+    }
+
+    div#leader-pane{width:227px;
+      ul{list-style:none;margin:0px;padding:0px;
+        li{float:left;font-family:'AgentOrange';font-size:14px;margin:0px 0px 14px 25px;
+          div.name{float:left;width:130px;}
+          div.score{float:left;text-align:right;width:50px;}
+        }
       }
     }
-    div#trash1{margin-left:40px;margin-top:40px;}
-    div#trash2{margin-left:30px;margin-top:15px;}
-    div#trash3{margin-left:40px;margin-top:35px;}
-    div#trash4{margin-left:50px;margin-top:20px;}
-    div#trash5{margin-left:30px;margin-top:50px;}
+
+
+    div#trashes{clear:both;height:250px;margin:0px auto 0px auto;width:850px;
+      div.trash{background:image-url("trash-back.png") no-repeat bottom center;float:left;height:200px;width:130px;
+        div.front{background:image-url("trash-front.png") no-repeat bottom center;height:140px;margin-top:60px;position:absolute;width:130px;}
+        div.content{
+          div.target{background:no-repeat top center;cursor:pointer;height:100px;margin:100px 0px 0px 20px;overflow:hidden;position:absolute;text-indent:-9999px;width:85px;
+            -moz-user-select:none;
+            -khtml-user-select:none;
+            -webkit-user-select:none;
+            user-select:none;
+          }
+          div.chicken{background-image:image-url("chicken.png");}
+          div.piggy{background-image:image-url("piggy.png");}
+        }
+      }
+      div#trash1{margin-left:40px;margin-top:40px;}
+      div#trash2{margin-left:30px;margin-top:15px;}
+      div#trash3{margin-left:40px;margin-top:35px;}
+      div#trash4{margin-left:50px;margin-top:20px;}
+      div#trash5{margin-left:30px;margin-top:50px;}
+    }
   }
 }
-
