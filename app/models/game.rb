@@ -4,6 +4,7 @@ class Game
   include Mongoid::Timestamps
 
   field :name
+  field :cheater, type: Boolean, default: false
   field :score, type: Integer, default: 0
 
   before_save :filter_name
