@@ -6,13 +6,9 @@
   # CONSTRUCTOR
   #*************************************************************************************
   constructor: ->
-    @score = 0
-    @life = 3
-
-    @launcher = window.setInterval((=> @popRandomTargets()), 500)
-
     if $('body').width() < 1100 then $('body').addClass 'mobile'
 
+    $('#click-to-start').click (e) => @startGame()
     $('#trashes div.chicken').click (e) => @hideChicken($(e.target), true)
     $('#trashes div.piggy').click (e) => @hidePiggy($(e.target), true)
 
@@ -91,6 +87,13 @@
       setTimeout ( => @hideChicken(target, false) ), expositionTime
     else
       setTimeout ( => @hidePiggy(target, false) ), expositionTime
+
+  startGame: () ->
+    @launcher = window.setInterval((=> @popRandomTargets()), 500)
+    $('#start-pane').hide()
+    $('#life-pane').fadeIn 500
+    @score = 0
+    @life = 3
 
 
   removeLife: () ->

@@ -22,7 +22,11 @@ body{background:image-url("bg.jpg") center bottom;background-attachment:fixed;bo
     }
 
     div#middle-pane{height:250px;margin-right:83px;width:400px;
-      div#life-pane{display:block;margin-top:80px;
+      div#start-pane{margin-top:105px;width:320px;
+        div#click-to-start{cursor:pointer;font-family:'AgentOrange';font-size:24px;text-align:center;width:100%;}
+      }
+
+      div#life-pane{display:none;margin-top:80px;
         div.life{background:image-url("piggy.png") no-repeat top center;float:left;height:100px;margin:0px 40px 0px 0px;width:85px;
           div.killed{background:image-url("killed.png") no-repeat top center;display:none;height:56px;margin:20px 0px 0px 16px;width:48px;}
         }

@@ -16,4 +16,9 @@ class GamesController < ApplicationController
   end
 end
 
-
+# Fit the ipad screens
+# Enlarge tap zone
+# Improve performance
+# Add sounds
+# Security. Identify cheaters
+# Favicon
